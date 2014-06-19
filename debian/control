@@ -8,7 +8,8 @@ Build-Depends: quilt,
  dh-buildinfo,
  cdbs (>= 0.4.69~),
  devscripts, cmake, libboost-dev | libboost1.54-dev,
- libmysqlclient15-dev, libpq-dev, libsqlite3-dev, unixodbc-dev, firebird-dev
+ libmysqlclient18-dev, libpq-dev, libsqlite3-dev, unixodbc-dev, firebird-dev,
+ oracleclient
 Standards-Version: 3.7.3
 Section: libs
 Homepage: http://soci.sourceforge.net
@@ -60,6 +61,18 @@ Description: C++ Database Access Library (MySQL backend)
  within Standard C++.
  .
  This package provides the MySQL backend.
+
+Package: libsoci-oracle-gcc
+Priority: optional
+Section: libs
+Architecture: any
+Depends: oracleclient, ${shlibs:Depends}, ${misc:Depends}
+Description: C++ Database Access Library (MySQL backend)
+ Database access library for C++ that makes the illusion of
+ embedding SQL queries in the regular C++ code, staying entirely
+ within Standard C++.
+ .
+ This package provides the Oracle backend.
 
 Package: libsoci-sqlite3-gcc
 Priority: optional
